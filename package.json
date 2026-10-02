@@ -1,13 +1,18 @@
 {
   "name": "monty-genius-ecom-tools",
   "version": "1.0.0",
-  "description": "MONTY GENIUS ECOM TOOLS — Free Tools for Smart Online Sellers",
+  "description": "MONTY GENIUS ECOM TOOLS — Commercial Edition",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "npm --prefix frontend run dev",
-    "build": "npm --prefix frontend run build",
-    "preview": "npm --prefix frontend run preview",
+    "dev": "npm --prefix apps/web run dev",
+    "build": "npm --prefix apps/web run build",
+    "preview": "npm --prefix apps/web run preview",
     "test": "node tests/run_all_tests.js"
   },
   "author": "Mr. Monty Genius",

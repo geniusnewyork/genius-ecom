@@ -1,0 +1,49 @@
+{
+  "name": "@monty-genius/web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@monty-genius/config": "*",
+    "@monty-genius/shared-types": "*",
+    "@monty-genius/calculator-engine": "*",
+    "@monty-genius/validation": "*",
+    "@monty-genius/ui": "*",
+    "browser-image-compression": "^2.0.2",
+    "file-saver": "^2.0.5",
+    "fuse.js": "^7.5.0",
+    "idb-keyval": "^6.3.0",
+    "jsbarcode": "^3.12.3",
+    "jszip": "^3.10.2",
+    "lucide-react": "^1.49.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.3.289",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4",
+    "recharts": "^3.10.1",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/file-saver": "^2.0.7",
+    "@types/jsbarcode": "^3.11.4",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "^10.6.1",
+    "oxlint": "^1.81.0",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
