@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://montygenius.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://montygenius.com/all-tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://montygenius.com/category/calculators</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://montygenius.com/category/pdf</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://montygenius.com/category/image</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://montygenius.com/category/seller</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://montygenius.com/category/ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- CALCULATORS -->
+  <url><loc>https://montygenius.com/tools/profit-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/product-pricing-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/gst-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/margin-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/rto-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/return-loss-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/marketplace-fee-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/break-even-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/discount-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/bulk-pricing-calculator</loc><priority>0.8</priority></url>
+
+  <!-- PDF TOOLS -->
+  <url><loc>https://montygenius.com/tools/pdf-cropper</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/pdf-merger</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/pdf-splitter</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/pdf-page-extractor</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/pdf-layout-tool</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/pdf-compressor</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/pdf-rotator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/pdf-page-reorder</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/pdf-to-image</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/image-to-pdf</loc><priority>0.8</priority></url>
+
+  <!-- IMAGE TOOLS -->
+  <url><loc>https://montygenius.com/tools/image-compressor</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/image-resizer</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/jpg-to-png</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/png-to-jpg</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/webp-converter</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/image-cropper</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/image-background</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/product-image-formatter</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/product-image-batch-resizer</loc><priority>0.8</priority></url>
+
+  <!-- SELLER UTILITIES -->
+  <url><loc>https://montygenius.com/tools/sku-generator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/qr-code-generator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/barcode-generator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/product-label-generator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/shipping-label-formatter</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/invoice-generator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/product-title-generator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/product-description-generator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/product-keyword-generator</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/hsn-helper</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/csv-formatter</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/csv-cleaner</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/bulk-product-data-formatter</loc><priority>0.8</priority></url>
+  <url><loc>https://montygenius.com/tools/ai-product-tools</loc><priority>0.8</priority></url>
+
+  <!-- SITE PAGES -->
+  <url><loc>https://montygenius.com/about</loc><priority>0.6</priority></url>
+  <url><loc>https://montygenius.com/contact</loc><priority>0.6</priority></url>
+  <url><loc>https://montygenius.com/privacy</loc><priority>0.6</priority></url>
+  <url><loc>https://montygenius.com/terms</loc><priority>0.6</priority></url>
+</urlset>
