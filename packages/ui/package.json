@@ -2,6 +2,7 @@
   "name": "@monty-genius/ui",
   "version": "1.0.0",
   "description": "Shared UI utilities and brand constants for Monty Genius",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {

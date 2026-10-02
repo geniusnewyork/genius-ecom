@@ -2,6 +2,7 @@
   "name": "@monty-genius/config",
   "version": "1.0.0",
   "description": "Central plan, features, and brand configuration for Monty Genius Ecom Tools",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {

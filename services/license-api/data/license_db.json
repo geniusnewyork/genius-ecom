@@ -93,6 +93,34 @@
   ],
   "licenses": [
     {
+      "id": "lic_mur27acik46f",
+      "keyHash": "d9b122ecf0b85fb36aed9f0241c292027844b9782a91d3f6ac31f1d41dba380d",
+      "keyMasked": "MGPRO-A4D4-****-****",
+      "planId": "PRO",
+      "userId": "enterprise@example.com",
+      "status": "SUSPENDED",
+      "createdAt": "2026-10-02T14:29:26.178Z",
+      "expiresAt": "2027-10-02T14:29:26.178Z",
+      "maxDevices": 3,
+      "customerName": "New Enterprise Seller",
+      "customerEmail": "enterprise@example.com",
+      "notes": ""
+    },
+    {
+      "id": "lic_mur23zgy8fcg",
+      "keyHash": "6a1d1a1dc5c0d7c413b81e85d0fe192fd8295516901f9ff237b3f5ef0f6a5583",
+      "keyMasked": "MGPRO-C223-****-****",
+      "planId": "PRO",
+      "userId": "enterprise@example.com",
+      "status": "SUSPENDED",
+      "createdAt": "2026-10-02T14:26:52.114Z",
+      "expiresAt": "2027-10-02T14:26:52.114Z",
+      "maxDevices": 3,
+      "customerName": "New Enterprise Seller",
+      "customerEmail": "enterprise@example.com",
+      "notes": ""
+    },
+    {
       "id": "lic_muqqkzfjzhm9",
       "keyHash": "734d60ee7996bd6fd1a92a86fba74aa26d4a579b40f20a19285570002de32766",
       "keyMasked": "MGPRO-80DE-****-****",
@@ -158,7 +186,7 @@
       "platform": "Win32",
       "extensionVersion": "1.0.0",
       "firstSeenAt": "2026-10-02T09:04:09.554Z",
-      "lastSeenAt": "2026-10-02T09:04:09.554Z",
+      "lastSeenAt": "2026-10-02T14:29:25.964Z",
       "status": "ACTIVE"
     },
     {
@@ -169,11 +197,39 @@
       "platform": "Browser",
       "extensionVersion": "1.0.0",
       "firstSeenAt": "2026-10-02T09:04:09.601Z",
-      "lastSeenAt": "2026-10-02T09:04:09.661Z",
+      "lastSeenAt": "2026-10-02T14:29:26.045Z",
       "status": "INACTIVE"
     }
   ],
   "activations": [
+    {
+      "id": "act_mur27a7s",
+      "licenseId": "lic_pro_dev",
+      "deviceId": "test_device_002",
+      "ipAddressHash": "eff8e7ca506627fe15dda5e0e512fcaad70b6d520f37cc76597fdb4f2d83a1a3",
+      "timestamp": "2026-10-02T14:29:26.008Z"
+    },
+    {
+      "id": "act_mur27a6m",
+      "licenseId": "lic_pro_dev",
+      "deviceId": "test_device_001",
+      "ipAddressHash": "eff8e7ca506627fe15dda5e0e512fcaad70b6d520f37cc76597fdb4f2d83a1a3",
+      "timestamp": "2026-10-02T14:29:25.966Z"
+    },
+    {
+      "id": "act_mur23z8p",
+      "licenseId": "lic_pro_dev",
+      "deviceId": "test_device_002",
+      "ipAddressHash": "eff8e7ca506627fe15dda5e0e512fcaad70b6d520f37cc76597fdb4f2d83a1a3",
+      "timestamp": "2026-10-02T14:26:51.817Z"
+    },
+    {
+      "id": "act_mur23z6f",
+      "licenseId": "lic_pro_dev",
+      "deviceId": "test_device_001",
+      "ipAddressHash": "eff8e7ca506627fe15dda5e0e512fcaad70b6d520f37cc76597fdb4f2d83a1a3",
+      "timestamp": "2026-10-02T14:26:51.735Z"
+    },
     {
       "id": "act_muqqkz9f",
       "licenseId": "lic_pro_dev",
@@ -190,6 +246,146 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "aud_mur27ad6u54b",
+      "timestamp": "2026-10-02T14:29:26.202Z",
+      "action": "LICENSE_SUSPENDED",
+      "licenseId": "lic_mur27acik46f",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN",
+      "details": {
+        "status": "SUSPENDED",
+        "reason": "Audit check"
+      }
+    },
+    {
+      "id": "aud_mur27ack2j8p",
+      "timestamp": "2026-10-02T14:29:26.180Z",
+      "action": "LICENSE_CREATED",
+      "licenseId": "lic_mur27acik46f",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN",
+      "details": {
+        "planId": "PRO",
+        "customerEmail": "enterprise@example.com",
+        "expiresAt": "2027-10-02T14:29:26.178Z"
+      }
+    },
+    {
+      "id": "aud_mur27ac9dsuq",
+      "timestamp": "2026-10-02T14:29:26.169Z",
+      "action": "ADMIN_LOGIN",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN"
+    },
+    {
+      "id": "aud_mur27aamdbkh",
+      "timestamp": "2026-10-02T14:29:26.110Z",
+      "action": "ADMIN_LOGIN",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN"
+    },
+    {
+      "id": "aud_mur27a8uvzrw",
+      "timestamp": "2026-10-02T14:29:26.046Z",
+      "action": "DEVICE_DEACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "actorType": "USER",
+      "details": {
+        "deviceIdentifier": "test_device_002"
+      }
+    },
+    {
+      "id": "aud_mur27a7tstbe",
+      "timestamp": "2026-10-02T14:29:26.010Z",
+      "action": "LICENSE_ACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "actorType": "USER",
+      "details": {
+        "deviceIdentifier": "test_device_002"
+      }
+    },
+    {
+      "id": "aud_mur27a6qqspg",
+      "timestamp": "2026-10-02T14:29:25.970Z",
+      "action": "LICENSE_ACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "actorType": "USER",
+      "details": {
+        "deviceIdentifier": "test_device_001",
+        "extensionVersion": "1.0.0"
+      }
+    },
+    {
+      "id": "aud_mur23zhayys4",
+      "timestamp": "2026-10-02T14:26:52.126Z",
+      "action": "LICENSE_SUSPENDED",
+      "licenseId": "lic_mur23zgy8fcg",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN",
+      "details": {
+        "status": "SUSPENDED",
+        "reason": "Audit check"
+      }
+    },
+    {
+      "id": "aud_mur23zgz4iy2",
+      "timestamp": "2026-10-02T14:26:52.115Z",
+      "action": "LICENSE_CREATED",
+      "licenseId": "lic_mur23zgy8fcg",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN",
+      "details": {
+        "planId": "PRO",
+        "customerEmail": "enterprise@example.com",
+        "expiresAt": "2027-10-02T14:26:52.114Z"
+      }
+    },
+    {
+      "id": "aud_mur23zgh5wuq",
+      "timestamp": "2026-10-02T14:26:52.097Z",
+      "action": "ADMIN_LOGIN",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN"
+    },
+    {
+      "id": "aud_mur23zf4bgt0",
+      "timestamp": "2026-10-02T14:26:52.048Z",
+      "action": "ADMIN_LOGIN",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN"
+    },
+    {
+      "id": "aud_mur23zakbqsq",
+      "timestamp": "2026-10-02T14:26:51.884Z",
+      "action": "DEVICE_DEACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "actorType": "USER",
+      "details": {
+        "deviceIdentifier": "test_device_002"
+      }
+    },
+    {
+      "id": "aud_mur23z8r0mbi",
+      "timestamp": "2026-10-02T14:26:51.819Z",
+      "action": "LICENSE_ACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "actorType": "USER",
+      "details": {
+        "deviceIdentifier": "test_device_002"
+      }
+    },
+    {
+      "id": "aud_mur23z6hoz42",
+      "timestamp": "2026-10-02T14:26:51.737Z",
+      "action": "LICENSE_ACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "actorType": "USER",
+      "details": {
+        "deviceIdentifier": "test_device_001",
+        "extensionVersion": "1.0.0"
+      }
+    },
     {
       "id": "aud_muqqkzgm8j7d",
       "timestamp": "2026-10-02T09:04:09.862Z",

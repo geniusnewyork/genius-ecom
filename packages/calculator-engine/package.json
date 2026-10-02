@@ -2,6 +2,7 @@
   "name": "@monty-genius/calculator-engine",
   "version": "1.0.0",
   "description": "Pure mathematical calculation engine for Monty Genius Ecom Tools",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {

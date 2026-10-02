@@ -15,22 +15,50 @@
 
 ## 🌟 Executive Overview
 
-**MONTY GENIUS ECOM TOOLS** is a comprehensive, production-ready, open-source web application suite and Chrome extension built specifically for online sellers (Amazon, Flipkart, Meesho, Shopify, Etsy, and independent D2C merchants).
+**MONTY GENIUS ECOM TOOLS** is a comprehensive, production-ready commercial software platform and open-source seller toolkit built specifically for online sellers (Amazon, Flipkart, Meesho, Shopify, Etsy, and independent D2C merchants).
+
+The platform features an architectural dual-mode design:
+1. **Free Personal Toolset Mode:** Works immediately for the owner and public users with 40+ browser-side tools and zero subscription fees.
+2. **Commercial Edition Mode:** Built-in License API, multi-device activation system, configurable plans (FREE, PRO, BUSINESS, LIFETIME), feature flag entitlement engine, role-based Admin Dashboard, and modular Manifest V3 Chrome Extension.
 
 Built with an unwavering **zero-upload, privacy-first architecture**, all sensitive calculations, PDF label operations, image cropping, and spreadsheet cleanups execute **locally inside your browser**. Your private product costs, margins, and customer data never leave your device.
 
 ---
 
+## 🏗️ Monorepo Architecture
+
+```text
+monty-genius-ecom-tools/
+├── apps/
+│   ├── web/               # React 19 + TypeScript + Vite + Tailwind CSS v4 (Public Web App)
+│   ├── extension/         # Manifest V3 Chrome Extension (Modular Autofill Engine)
+│   └── admin/             # React 19 + Vite + TypeScript (Role-based Admin Dashboard)
+├── services/
+│   └── license-api/       # REST API (/api/v1/), SQLite/Postgres DB, HMAC Tokens, Rate Limiting
+├── packages/
+│   ├── shared-types/      # TypeScript definitions (License, Device, Plan, User, AuditLog)
+│   ├── ui/                # Shared UI tokens and components
+│   ├── calculator-engine/ # Pure calculation engine functions
+│   ├── validation/        # Cryptographic key & payload validation
+│   └── config/            # Central plans, feature flags, and brand constants
+├── docs/                  # Exhaustive documentation (Architecture, API, Extension, Security)
+├── tests/                 # Automated test suites (Calculators, Utilities, Commercial Licensing)
+└── scripts/               # Chrome Web Store packaging and deployment scripts
+```
+
+---
+
 ## 🚀 Key Features & Highlights
 
-- ⚡ **40+ Dedicated Tools:** Seller calculators, PDF utilities, image editors, barcode/QR generators, invoice makers, and CSV cleaners.
-- 🔒 **100% Client-Side Privacy:** Zero server file uploads. Your business secrets stay on your machine.
-- 🧩 **MONTY GENIUS SELLER ASSISTANT:** Manifest V3 Chrome Extension with configurable CSS selector form autofill.
-- 🧪 **Self-Test Mode (`/dev/test-suite`):** Built-in deterministic formula verifier ensuring mathematical accuracy.
-- 📱 **Installable PWA:** Works offline with service workers and local caching.
+- ⚡ **43+ Dedicated Tools:** Seller calculators, PDF utilities, image editors, barcode/QR generators, invoice makers, CSV cleaners, and AI content assistant.
+- 🔒 **100% Client-Side Privacy:** Zero server file uploads for documents, spreadsheets, and product photography.
+- 🧩 **MONTY GENIUS SELLER ASSISTANT:** Manifest V3 Chrome Extension with generic marketplace adapters (Amazon, Flipkart, Meesho, Shopify) and configurable CSS selectors.
+- 🔑 **Commercial Licensing & Device System:** Cryptographically secure keys (`MGPRO-XXXX`), SHA-256 hashing, HMAC-SHA256 offline tokens, and strict per-plan device limits.
+- 🛡️ **Role-Based Admin Dashboard:** Real-time statistics, license creation, suspension, extension, device seat resets, and immutable security audit logs.
+- 🧪 **Deterministic Test Suite:** Complete unit, integration, and security tests runnable via `npm test`.
 - 🎨 **Modern SaaS Interface:** Premium cyan/blue accents, glassmorphic cards, seamless dark/light mode toggle.
 - 🔍 **Instant Fuzzy Search (Ctrl+K):** Real-time tool discovery by name, keyword, or operational need.
-- 💰 **Zero Paid Dependencies:** No paid APIs, no recurring software subscriptions, no database charges.
+- 💰 **Zero Paid Dependencies:** No paid APIs, no recurring software subscriptions, no database charges required.
 
 ---
 
@@ -71,7 +99,7 @@ Built with an unwavering **zero-upload, privacy-first architecture**, all sensit
 28. **Product Image Formatter** (`/tools/product-image-formatter`): Format images to standard 1000x1000 marketplace guidelines.
 29. **Batch Resizer** (`/tools/product-image-batch-resizer`): Bulk resize dozens of product images and export as a ZIP.
 
-### 🏷️ 4. Seller Utilities
+### 🏷️ 4. Seller Utilities & AI
 30. **SKU Generator** (`/tools/sku-generator`): Create systematic inventory SKUs with prefixes, categories, and sequences.
 31. **QR Code Generator** (`/tools/qr-code-generator`): Generate UPI payments, WhatsApp, URLs, and Wi-Fi QR codes in PNG and SVG.
 32. **Barcode Generator** (`/tools/barcode-generator`): Standard Code 128, EAN-13, EAN-8, and UPC-A with SVG/PNG download.
@@ -92,90 +120,62 @@ Built with an unwavering **zero-upload, privacy-first architecture**, all sensit
 ## 💻 Quick Start & Commands
 
 ### 1. Prerequisites
-- Node.js v18+ (tested on Node v22)
+- Node.js v18+ (tested on Node v22.23.2)
 - npm v9+
 
-### 2. Installation
+### 2. Available Workspace Commands
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/monty-genius-ecom-tools.git
-cd "monty-genius-ecom-tools"
-
-# Install frontend dependencies
-npm install --prefix frontend
-```
-
-### 3. Run Development Server
-```bash
+# Start Web Application (http://localhost:5173)
 npm run dev
-# Starts local Vite development server at http://localhost:5173
-```
+# or: npm run dev:web
 
-### 4. Run Automated Test Suite
-```bash
+# Start Admin Dashboard (http://localhost:5174)
+npm run dev:admin
+
+# Start License API Server (http://localhost:4000)
+npm run dev:api
+
+# Run All Automated Test Suites (Unit + Security + API)
 npm test
-# Executes deterministic unit tests across all formulas and logic
-```
 
-### 5. Build for Production
-```bash
+# Build All Apps for Production
 npm run build
-# Compiles optimized production bundle in frontend/dist/
-```
 
-### 6. Preview Production Build
-```bash
-npm run preview
-# Serves the compiled production build locally
+# Package Chrome Extension for Chrome Web Store (dist/monty-genius-seller-assistant-v1.0.0.zip)
+npm run package:extension
 ```
 
 ---
 
 ## 🧩 Chrome Extension Setup
 
-The **MONTY GENIUS SELLER ASSISTANT** Chrome Extension (Manifest V3) is ready in the `extension/` folder:
+The **MONTY GENIUS SELLER ASSISTANT** Chrome Extension (Manifest V3) is ready in the `apps/extension/` folder:
 
-1. Open Google Chrome and navigate to `chrome://extensions/`.
+1. Open Google Chrome (or Edge/Brave) and navigate to `chrome://extensions/`.
 2. Toggle **Developer mode** on in the upper-right corner.
-3. Click **Load unpacked** and select the `extension` folder:
+3. Click **Load unpacked** and select the extension folder:
    ```
-   m:\MONTY GENIUS ECOM TOOLS\extension
+   m:\MONTY GENIUS ECOM TOOLS\apps\extension
    ```
 4. Pin the extension to your browser toolbar.
 5. Use it to store product catalogs and 1-click autofill seller listing forms safely!
 
 ---
 
-## 🧪 Self-Test Verification Mode
+## 📚 Complete Documentation Index
 
-Navigate to `/dev/test-suite` in the web application (or run `npm test` in the terminal) to execute automated deterministic test verifications:
-- Profit, Margin & Break-even calculations
-- Inclusive & Exclusive GST extractions
-- Discount math & RTO loss metrics
-- Barcode validation (EAN-13, EAN-8, UPC-A, Code 128)
-- QR code UPI & Wi-Fi payload formats
-- CSV deduplication & whitespace cleaning
-- LocalStorage persistence read/write checks
-
----
-
-## 🚢 Deployment
-
-Detailed deployment guides are available in `docs/DEPLOYMENT.md`:
-- **Vercel:** Zero-config static deployment targeting `frontend/` root.
-- **Cloudflare Pages:** Global edge CDN deployment with `frontend/dist`.
-- **GitHub Pages:** Automated deployment via GitHub Actions workflow.
-
----
-
-## 📚 Documentation Index
-
-- [ARCHITECTURE.md](docs/ARCHITECTURE.md) — Technical system design and technology choices
-- [TOOLS.md](docs/TOOLS.md) — Exhaustive tool specifications and formulas
-- [EXTENSION.md](docs/EXTENSION.md) — Chrome extension architecture and selector mapping guide
-- [DEPLOYMENT.md](docs/DEPLOYMENT.md) — Production deployment instructions
+All technical documents are stored in the `docs/` directory:
+- [USER_MANUAL.md](docs/USER_MANUAL.md) — Comprehensive user manual for every tool and extension workflow
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md) — Technical system design, monorepo structure, and technology choices
+- [LICENSE-SYSTEM.md](docs/LICENSE-SYSTEM.md) — Cryptographic license architecture, device limits, and offline grace tokens
+- [ADMIN.md](docs/ADMIN.md) — Admin dashboard architecture, authentication, and license lifecycle management
+- [EXTENSION.md](docs/EXTENSION.md) — Chrome extension architecture, adapter patterns, and selector mapping guide
+- [SECURITY.md](docs/SECURITY.md) — Security policies, threat model, input sanitization, and permission audit
+- [DATABASE.md](docs/DATABASE.md) — Database schema, abstraction layer, migrations, and seed scripts
+- [PAYMENTS.md](docs/PAYMENTS.md) — PaymentProvider abstraction, webhook security, and automatic fulfillment flow
+- [DEPLOYMENT.md](docs/DEPLOYMENT.md) — Commercial deployment guide (Vercel, Cloudflare, Node/Docker)
 - [PRIVACY.md](docs/PRIVACY.md) — In-browser local processing and privacy guarantees
-- [SECURITY.md](docs/SECURITY.md) — Security policies and input sanitization standards
+- [TOOLS.md](docs/TOOLS.md) — Exhaustive tool specifications, mathematical formulas, and capabilities
 
 ---
 

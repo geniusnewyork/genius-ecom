@@ -11,9 +11,18 @@
   ],
   "scripts": {
     "dev": "npm --prefix apps/web run dev",
-    "build": "npm --prefix apps/web run build",
+    "dev:web": "npm --prefix apps/web run dev",
+    "dev:admin": "npm --prefix apps/admin run dev",
+    "dev:api": "node services/license-api/src/index.js",
+    "build": "npm --prefix apps/web run build && npm --prefix apps/admin run build",
+    "build:web": "npm --prefix apps/web run build",
+    "build:admin": "npm --prefix apps/admin run build",
     "preview": "npm --prefix apps/web run preview",
-    "test": "node tests/run_all_tests.js"
+    "preview:admin": "npm --prefix apps/admin run preview",
+    "package:extension": "node scripts/package-extension.js",
+    "test": "node tests/run_all_tests.js && node services/license-api/test/api.test.js",
+    "test:unit": "node tests/run_all_tests.js",
+    "test:api": "node services/license-api/test/api.test.js"
   },
   "author": "Mr. Monty Genius",
   "license": "MIT"

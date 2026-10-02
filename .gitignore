@@ -7,7 +7,9 @@ node_modules/
 # Production Builds
 dist/
 build/
+apps/*/dist/
 frontend/dist/
+*.zip
 
 # Environment and Secrets
 .env
