@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONTY GENIUS SELLER ASSISTANT - Settings & Mappings</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #0b1329; color: #f1f5f9; padding: 30px; font-size: 14px; }
+    .max-container { max-width: 960px; margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1e293b; padding-bottom: 20px; margin-bottom: 25px; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-logo { background: linear-gradient(135deg, #06b6d4, #3b82f6); color: white; font-weight: 800; font-size: 18px; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .brand-title { font-size: 20px; font-weight: 800; color: #38bdf8; }
+    .brand-sub { font-size: 12px; color: #94a3b8; }
+    
+    .nav-tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+    .tab-btn { background: #1e293b; border: 1px solid #334155; color: #94a3b8; padding: 10px 18px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+    .tab-btn.active { background: #06b6d4; color: #ffffff; border-color: #06b6d4; }
+    
+    .card { background: #131d36; border: 1px solid #1e293b; border-radius: 10px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3); }
+    h2 { font-size: 16px; margin-bottom: 15px; color: #e2e8f0; font-weight: 700; }
+    p.hint { color: #94a3b8; font-size: 13px; margin-bottom: 18px; }
+    
+    table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+    th { text-align: left; padding: 10px; color: #94a3b8; font-size: 12px; border-bottom: 1px solid #334155; }
+    td { padding: 12px 10px; border-bottom: 1px solid #1e293b; }
+    
+    input[type="text"], input[type="number"], textarea, select {
+      width: 100%; padding: 8px 12px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: #f8fafc; font-size: 13px; outline: none;
+    }
+    input:focus, textarea:focus { border-color: #06b6d4; }
+    
+    .btn { padding: 8px 14px; border-radius: 6px; font-weight: 600; cursor: pointer; border: none; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary { background: #06b6d4; color: white; }
+    .btn-primary:hover { background: #0891b2; }
+    .btn-outline { background: transparent; border: 1px solid #334155; color: #38bdf8; }
+    .btn-outline:hover { background: #1e293b; }
+    .btn-danger { background: #ef4444; color: white; }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+    
+    .footer { text-align: center; color: #64748b; font-size: 12px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class="max-container">
+    <header>
+      <div class="brand">
+        <div class="brand-logo">MG</div>
+        <div>
+          <h1 class="brand-title">MONTY GENIUS SELLER ASSISTANT</h1>
+          <p class="brand-sub">Configurable Form Autofill & Catalog Manager</p>
+        </div>
+      </div>
+      <a href="http://localhost:5173" target="_blank" class="btn btn-outline">Open Monty Genius Web Tools ↗</a>
+    </header>
+
+    <div class="nav-tabs">
+      <button id="tabMappingsBtn" class="tab-btn active">CSS Selector Mappings</button>
+      <button id="tabCatalogBtn" class="tab-btn">Saved Product Catalog</button>
+    </div>
+
+    <!-- TAB 1: MAPPINGS -->
+    <div id="tabMappingsContent">
+      <div class="card">
+        <h2>Field Selector Configuration</h2>
+        <p class="hint">Define CSS selectors for the target input/textarea elements on your seller listing page. The extension uses these selectors to fill fields safely on your command.</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 40px;">Active</th>
+              <th style="width: 140px;">Saved Field</th>
+              <th>CSS Selector (e.g. input[name="price"])</th>
+              <th style="width: 120px;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="mappingsTableBody">
+            <!-- Rendered via JS -->
+          </tbody>
+        </table>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+          <button id="btnSaveMappings" class="btn btn-primary">💾 Save All Mappings</button>
+          <span id="mappingStatus" style="font-size: 13px; color: #34d399;"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: PRODUCT CATALOG -->
+    <div id="tabCatalogContent" style="display: none;">
+      <div class="card">
+        <h2>Add or Edit Product</h2>
+        <div class="grid-2">
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">Title</label>
+            <input type="text" id="newTitle" placeholder="e.g. Cotton T-Shirt">
+          </div>
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">SKU</label>
+            <input type="text" id="newSku" placeholder="e.g. MG-TSHIRT-01">
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">Selling Price (₹)</label>
+            <input type="number" id="newPrice" placeholder="499">
+          </div>
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">MRP (₹)</label>
+            <input type="number" id="newMrp" placeholder="999">
+          </div>
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">GST Rate (%)</label>
+            <input type="number" id="newGst" placeholder="18">
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">Brand</label>
+            <input type="text" id="newBrand" placeholder="Brand Name">
+          </div>
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">HSN Code</label>
+            <input type="text" id="newHsn" placeholder="6109">
+          </div>
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">Weight (kg)</label>
+            <input type="text" id="newWeight" placeholder="0.25">
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">Color</label>
+            <input type="text" id="newColor" placeholder="Black">
+          </div>
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">Size</label>
+            <input type="text" id="newSize" placeholder="M / L / XL">
+          </div>
+          <div>
+            <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">Material</label>
+            <input type="text" id="newMaterial" placeholder="Cotton / Polyester">
+          </div>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <label style="display:block; margin-bottom:4px; font-size:12px; color:#94a3b8;">Description</label>
+          <textarea id="newDesc" rows="3" placeholder="Product description text..."></textarea>
+        </div>
+
+        <button id="btnAddProduct" class="btn btn-primary">➕ Add to Saved Catalog</button>
+      </div>
+
+      <div class="card">
+        <h2>Saved Products (<span id="prodCount">0</span>)</h2>
+        <div id="productList" style="display: flex; flex-direction: column; gap: 10px;">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Designed with ❤️ by Mr. Monty Genius | 100% Free & Open-Source
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
