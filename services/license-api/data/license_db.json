@@ -1,0 +1,291 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_01",
+      "email": "admin@montygenius.com",
+      "name": "Mr. Monty Genius (Super Admin)",
+      "passwordHash": "44fa3d8989f6aec51ad28d28bc8d40c2a3fa1dcaf1d30e8c2c252a84d9842534",
+      "role": "SUPER_ADMIN",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-02T09:04:09.273Z"
+    }
+  ],
+  "plans": [
+    {
+      "id": "FREE",
+      "name": "Free Forever",
+      "price": 0,
+      "currency": "INR",
+      "durationDays": 0,
+      "maxDevices": 1,
+      "features": [
+        "BASIC_CALCULATORS",
+        "PDF_TOOLS",
+        "IMAGE_TOOLS",
+        "BULK_TOOLS"
+      ],
+      "active": true,
+      "description": "Essential web tools for individuals and budding e-commerce sellers."
+    },
+    {
+      "id": "PRO",
+      "name": "Seller Pro",
+      "price": 499,
+      "currency": "INR",
+      "durationDays": 365,
+      "maxDevices": 2,
+      "features": [
+        "BASIC_CALCULATORS",
+        "PDF_TOOLS",
+        "IMAGE_TOOLS",
+        "BULK_TOOLS",
+        "SELLER_EXTENSION",
+        "AUTOFILL",
+        "ADVANCED_SKU",
+        "AI_TOOLS"
+      ],
+      "active": true,
+      "description": "Complete seller suite with Seller Assistant Chrome Extension & 1-Click Autofill."
+    },
+    {
+      "id": "BUSINESS",
+      "name": "Business Growth",
+      "price": 1499,
+      "currency": "INR",
+      "durationDays": 365,
+      "maxDevices": 5,
+      "features": [
+        "BASIC_CALCULATORS",
+        "PDF_TOOLS",
+        "IMAGE_TOOLS",
+        "BULK_TOOLS",
+        "SELLER_EXTENSION",
+        "AUTOFILL",
+        "ADVANCED_SKU",
+        "AI_TOOLS",
+        "MULTI_DEVICE",
+        "TEAM_SUPPORT"
+      ],
+      "active": true,
+      "description": "For growing e-commerce brands with multiple staff members and packing stations."
+    },
+    {
+      "id": "LIFETIME",
+      "name": "Lifetime Founder",
+      "price": 2999,
+      "currency": "INR",
+      "durationDays": 0,
+      "maxDevices": 3,
+      "features": [
+        "BASIC_CALCULATORS",
+        "PDF_TOOLS",
+        "IMAGE_TOOLS",
+        "BULK_TOOLS",
+        "SELLER_EXTENSION",
+        "AUTOFILL",
+        "ADVANCED_SKU",
+        "AI_TOOLS",
+        "MULTI_DEVICE"
+      ],
+      "active": true,
+      "description": "One-time investment. All current and future Pro features included forever."
+    }
+  ],
+  "licenses": [
+    {
+      "id": "lic_muqqkzfjzhm9",
+      "keyHash": "734d60ee7996bd6fd1a92a86fba74aa26d4a579b40f20a19285570002de32766",
+      "keyMasked": "MGPRO-80DE-****-****",
+      "planId": "PRO",
+      "userId": "enterprise@example.com",
+      "status": "SUSPENDED",
+      "createdAt": "2026-10-02T09:04:09.823Z",
+      "expiresAt": "2027-10-02T09:04:09.823Z",
+      "maxDevices": 3,
+      "customerName": "New Enterprise Seller",
+      "customerEmail": "enterprise@example.com",
+      "notes": ""
+    },
+    {
+      "id": "lic_lifetime_dev",
+      "keyHash": "55cf2d32d30dbc0114e8eb7a93277af9e9dab6d6bb3c609b614e99afe27d1721",
+      "keyMasked": "MGDEV-LIFE-****-****",
+      "planId": "LIFETIME",
+      "userId": "dev_user",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-02T09:04:09.307Z",
+      "expiresAt": null,
+      "maxDevices": 10,
+      "customerName": "Dev Lifetime Owner",
+      "customerEmail": "dev@montygenius.com",
+      "notes": "Pre-seeded development testing license"
+    },
+    {
+      "id": "lic_business_dev",
+      "keyHash": "8cf011575a419a29a19d8a41fb0b7e6ffed42fdb9c987637bfd1f8b66ee27475",
+      "keyMasked": "MGDEV-BIZ-****-****",
+      "planId": "BUSINESS",
+      "userId": "dev_user",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-02T09:04:09.305Z",
+      "expiresAt": "2027-10-02T09:04:09.305Z",
+      "maxDevices": 5,
+      "customerName": "Dev Business Tester",
+      "customerEmail": "dev@montygenius.com",
+      "notes": "Pre-seeded development testing license"
+    },
+    {
+      "id": "lic_pro_dev",
+      "keyHash": "7d12735e779a7dc703a7d035499f98fa2c5f82f1d72f413e81705cb249b72a91",
+      "keyMasked": "MGDEV-PRO-****-****",
+      "planId": "PRO",
+      "userId": "dev_user",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-02T09:04:09.302Z",
+      "expiresAt": "2027-10-02T09:04:09.302Z",
+      "maxDevices": 2,
+      "customerName": "Dev Pro Tester",
+      "customerEmail": "dev@montygenius.com",
+      "notes": "Pre-seeded development testing license"
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev_rec_muqqkz82k6n4",
+      "licenseId": "lic_pro_dev",
+      "deviceIdentifier": "test_device_001",
+      "deviceName": "Test Windows Laptop",
+      "platform": "Win32",
+      "extensionVersion": "1.0.0",
+      "firstSeenAt": "2026-10-02T09:04:09.554Z",
+      "lastSeenAt": "2026-10-02T09:04:09.554Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "dev_rec_muqqkz9dxdvc",
+      "licenseId": "lic_pro_dev",
+      "deviceIdentifier": "test_device_002",
+      "deviceName": "Seller Workstation",
+      "platform": "Browser",
+      "extensionVersion": "1.0.0",
+      "firstSeenAt": "2026-10-02T09:04:09.601Z",
+      "lastSeenAt": "2026-10-02T09:04:09.661Z",
+      "status": "INACTIVE"
+    }
+  ],
+  "activations": [
+    {
+      "id": "act_muqqkz9f",
+      "licenseId": "lic_pro_dev",
+      "deviceId": "test_device_002",
+      "ipAddressHash": "eff8e7ca506627fe15dda5e0e512fcaad70b6d520f37cc76597fdb4f2d83a1a3",
+      "timestamp": "2026-10-02T09:04:09.603Z"
+    },
+    {
+      "id": "act_muqqkz85",
+      "licenseId": "lic_pro_dev",
+      "deviceId": "test_device_001",
+      "ipAddressHash": "eff8e7ca506627fe15dda5e0e512fcaad70b6d520f37cc76597fdb4f2d83a1a3",
+      "timestamp": "2026-10-02T09:04:09.557Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud_muqqkzgm8j7d",
+      "timestamp": "2026-10-02T09:04:09.862Z",
+      "action": "LICENSE_SUSPENDED",
+      "licenseId": "lic_muqqkzfjzhm9",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN",
+      "details": {
+        "status": "SUSPENDED",
+        "reason": "Audit check"
+      }
+    },
+    {
+      "id": "aud_muqqkzfky3yi",
+      "timestamp": "2026-10-02T09:04:09.824Z",
+      "action": "LICENSE_CREATED",
+      "licenseId": "lic_muqqkzfjzhm9",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN",
+      "details": {
+        "planId": "PRO",
+        "customerEmail": "enterprise@example.com",
+        "expiresAt": "2027-10-02T09:04:09.823Z"
+      }
+    },
+    {
+      "id": "aud_muqqkzeyc7dn",
+      "timestamp": "2026-10-02T09:04:09.802Z",
+      "action": "ADMIN_LOGIN",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN"
+    },
+    {
+      "id": "aud_muqqkzdeduz6",
+      "timestamp": "2026-10-02T09:04:09.746Z",
+      "action": "ADMIN_LOGIN",
+      "actorId": "admin@montygenius.com",
+      "actorType": "ADMIN"
+    },
+    {
+      "id": "aud_muqqkzb2gxrl",
+      "timestamp": "2026-10-02T09:04:09.663Z",
+      "action": "DEVICE_DEACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "actorType": "USER",
+      "details": {
+        "deviceIdentifier": "test_device_002"
+      }
+    },
+    {
+      "id": "aud_muqqkz9gizjj",
+      "timestamp": "2026-10-02T09:04:09.604Z",
+      "action": "LICENSE_ACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "actorType": "USER",
+      "details": {
+        "deviceIdentifier": "test_device_002"
+      }
+    },
+    {
+      "id": "aud_muqqkz9e4ztm",
+      "timestamp": "2026-10-02T09:04:09.602Z",
+      "action": "DEVICE_ACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "deviceId": "dev_rec_muqqkz9dxdvc",
+      "actorType": "USER",
+      "details": {}
+    },
+    {
+      "id": "aud_muqqkz86i1hv",
+      "timestamp": "2026-10-02T09:04:09.558Z",
+      "action": "LICENSE_ACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "actorType": "USER",
+      "details": {
+        "deviceIdentifier": "test_device_001",
+        "extensionVersion": "1.0.0"
+      }
+    },
+    {
+      "id": "aud_muqqkz83r9sw",
+      "timestamp": "2026-10-02T09:04:09.556Z",
+      "action": "DEVICE_ACTIVATED",
+      "licenseId": "lic_pro_dev",
+      "deviceId": "dev_rec_muqqkz82k6n4",
+      "actorType": "USER",
+      "details": {
+        "deviceName": "Test Windows Laptop",
+        "platform": "Win32",
+        "extensionVersion": "1.0.0"
+      }
+    }
+  ],
+  "extensionVersions": [],
+  "systemSettings": {
+    "minSupportedExtensionVersion": "1.0.0",
+    "latestExtensionVersion": "1.0.0"
+  }
+}
