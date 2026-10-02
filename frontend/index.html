@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>MONTY GENIUS ECOM TOOLS — Free Tools for Smart Online Sellers</title>
+    <meta name="title" content="MONTY GENIUS ECOM TOOLS — Free Tools for Smart Online Sellers" />
+    <meta name="description" content="100% Free e-commerce seller utilities: Profit Calculator, GST Calculator, PDF Cropper, Image Compressor, SKU Generator, QR Code & Barcode Maker, and Chrome Seller Assistant." />
+    <meta name="keywords" content="ecom tools, profit calculator, gst calculator, pdf cropper, rto calculator, meesho calculator, amazon fee calculator, flipkart profit calculator, sku generator, product label maker" />
+    <meta name="author" content="Mr. Monty Genius" />
+    <meta name="theme-color" content="#06b6d4" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://montygenius.com/" />
+    <meta property="og:title" content="MONTY GENIUS ECOM TOOLS — Free Tools for Smart Online Sellers" />
+    <meta property="og:description" content="Free, browser-based e-commerce utilities. Calculate profit, margins, GST, crop PDF shipping labels, compress images, and generate barcodes locally." />
+    <meta property="og:image" content="/pwa-512.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://montygenius.com/" />
+    <meta property="twitter:title" content="MONTY GENIUS ECOM TOOLS — Free Tools for Smart Online Sellers" />
+    <meta property="twitter:description" content="Free, browser-based e-commerce utilities designed by Mr. Monty Genius for smart online sellers." />
+    <meta property="twitter:image" content="/pwa-512.png" />
+
+    <!-- Favicons & Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/pwa-192.png" />
+  </head>
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-cyan-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Service Worker Registration for PWA -->
+    <script>
+      if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => {
+            console.log('SW registration note:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "monty-genius-ecom-tools",
+  "version": "1.0.0",
+  "description": "MONTY GENIUS ECOM TOOLS — Free Tools for Smart Online Sellers",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "test": "node tests/run_all_tests.js"
+  },
+  "author": "Mr. Monty Genius",
+  "license": "MIT"
+}
