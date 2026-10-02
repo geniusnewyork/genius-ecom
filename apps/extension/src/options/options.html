@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONTY GENIUS SELLER ASSISTANT - Settings & Catalog</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="max-container">
+    <header>
+      <div class="brand">
+        <div class="brand-logo">MG</div>
+        <div>
+          <h1 class="brand-title">MONTY GENIUS SELLER ASSISTANT</h1>
+          <p class="brand-sub">Universal Form Autofill, Product Catalog & Device Licensing</p>
+        </div>
+      </div>
+      <a href="http://localhost:5173" target="_blank" class="btn btn-outline">Open Monty Genius Web Tools ↗</a>
+    </header>
+
+    <div class="nav-tabs">
+      <button id="tabMappingsBtn" class="tab-btn active">CSS Selector Mappings</button>
+      <button id="tabCatalogBtn" class="tab-btn">Saved Product Catalog</button>
+      <button id="tabLicenseBtn" class="tab-btn">License & Devices</button>
+    </div>
+
+    <!-- TAB 1: MAPPINGS -->
+    <div id="tabMappingsContent">
+      <div class="card">
+        <div class="card-header">
+          <h2>Field Selector Configuration</h2>
+          <button id="btnResetMappings" class="btn btn-secondary btn-sm">↺ Reset Defaults</button>
+        </div>
+        <p class="hint">Define CSS selectors for target input/textarea elements on your seller portals. Click "Test Matching" to highlight the element on your active tab in glowing green.</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 50px;">Active</th>
+              <th style="width: 150px;">Field Name</th>
+              <th>CSS Selector (e.g. input[name="price"])</th>
+              <th style="width: 130px;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="mappingsTableBody">
+            <!-- Rendered via JS -->
+          </tbody>
+        </table>
+
+        <div class="table-actions">
+          <button id="btnSaveMappings" class="btn btn-primary">💾 Save All Mappings</button>
+          <span id="mappingStatus" class="status-indicator"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: PRODUCT CATALOG -->
+    <div id="tabCatalogContent" class="hidden">
+      <div class="card">
+        <h2>Add or Edit Product</h2>
+        <input type="hidden" id="editProductId" value="">
+        <div class="grid-2">
+          <div>
+            <label class="field-label">Product Title *</label>
+            <input type="text" id="newTitle" placeholder="e.g. Cotton T-Shirt">
+          </div>
+          <div>
+            <label class="field-label">SKU / Inventory Code *</label>
+            <input type="text" id="newSku" placeholder="e.g. MG-TSHIRT-01">
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div>
+            <label class="field-label">Selling Price (₹) *</label>
+            <input type="number" id="newPrice" placeholder="499">
+          </div>
+          <div>
+            <label class="field-label">MRP (₹)</label>
+            <input type="number" id="newMrp" placeholder="999">
+          </div>
+          <div>
+            <label class="field-label">GST Rate (%)</label>
+            <input type="number" id="newGst" placeholder="18">
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div>
+            <label class="field-label">Brand</label>
+            <input type="text" id="newBrand" placeholder="Monty Genius">
+          </div>
+          <div>
+            <label class="field-label">HSN Code</label>
+            <input type="text" id="newHsn" placeholder="6109">
+          </div>
+          <div>
+            <label class="field-label">Weight (kg)</label>
+            <input type="text" id="newWeight" placeholder="0.25">
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div>
+            <label class="field-label">Color</label>
+            <input type="text" id="newColor" placeholder="Black">
+          </div>
+          <div>
+            <label class="field-label">Size</label>
+            <input type="text" id="newSize" placeholder="M / L / XL">
+          </div>
+          <div>
+            <label class="field-label">Material</label>
+            <input type="text" id="newMaterial" placeholder="100% Cotton">
+          </div>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <label class="field-label">Description</label>
+          <textarea id="newDesc" rows="3" placeholder="Compelling product description text..."></textarea>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button id="btnAddProduct" class="btn btn-primary">➕ Save Product Profile</button>
+          <button id="btnCancelEdit" class="btn btn-secondary hidden">Cancel</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="catalog-toolbar">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <h2>Saved Products (<span id="prodCount">0</span>)</h2>
+            <input type="text" id="searchProductsInput" placeholder="Search catalog..." style="width: 200px; padding: 6px 10px;">
+          </div>
+          <div class="btn-group">
+            <button id="btnExportJSON" class="btn btn-secondary btn-sm">Export JSON</button>
+            <button id="btnExportCSV" class="btn btn-secondary btn-sm">Export CSV</button>
+            <label class="btn btn-secondary btn-sm" style="cursor: pointer; margin-bottom: 0;">
+              Import File
+              <input type="file" id="importFileInput" accept=".json,.csv" style="display: none;">
+            </label>
+          </div>
+        </div>
+
+        <div id="productList" class="product-list">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: LICENSE & DEVICES -->
+    <div id="tabLicenseContent" class="hidden">
+      <div class="card">
+        <h2>License Information</h2>
+        <div class="grid-2">
+          <div class="info-box">
+            <span class="info-label">Active Plan</span>
+            <span id="licPlan" class="info-val">FREE MODE</span>
+          </div>
+          <div class="info-box">
+            <span class="info-label">License Status</span>
+            <span id="licStatus" class="info-val">ACTIVE</span>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 15px;">
+          <div class="info-box">
+            <span class="info-label">License Key</span>
+            <span id="licKey" class="info-val font-mono">MGDEV-DEVELOPMENT-BYPASS</span>
+          </div>
+          <div class="info-box">
+            <span class="info-label">Expiry Date</span>
+            <span id="licExpiry" class="info-val">Never (Lifetime)</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 14px; margin-bottom: 8px;">Device Identity (Privacy-Conscious)</h3>
+          <div class="info-box">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+              <span class="info-label">Installation Identifier:</span>
+              <span id="licDeviceId" class="font-mono text-cyan-400">dev_...</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span class="info-label">Device Name:</span>
+              <span id="licDeviceName">Primary Laptop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="license-actions">
+          <button id="btnDeactivateDevice" class="btn btn-danger">
+            Disconnect Device (Free Seat)
+          </button>
+          <a href="http://localhost:5173/pricing" target="_blank" class="btn btn-primary">
+            Upgrade / Manage Plans ↗
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Designed with ❤️ by Mr. Monty Genius | 100% Free & Open-Source
+    </div>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

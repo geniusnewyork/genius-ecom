@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONTY GENIUS SELLER ASSISTANT</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo-icon">MG</div>
+        <div>
+          <h1 class="brand-title">MONTY GENIUS</h1>
+          <p class="brand-subtitle">SELLER ASSISTANT</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="btnLicenseModal" class="icon-btn" title="License & Activation">🔑</button>
+        <button id="btnOptions" class="icon-btn" title="Settings & Mappings">⚙️</button>
+      </div>
+    </header>
+
+    <!-- License Banner -->
+    <div id="licenseBanner" class="license-banner">
+      <span id="planBadge" class="badge">Checking license...</span>
+      <span id="licenseDetail" class="license-detail"></span>
+    </div>
+
+    <!-- Current Site Badge -->
+    <div class="site-badge">
+      <span class="site-indicator">●</span>
+      <span id="currentDomain" class="site-domain">Detecting site...</span>
+    </div>
+
+    <!-- License Activation Prompt (shown when activation required) -->
+    <div id="activationBox" class="activation-box hidden">
+      <h3 class="activation-title">Activate License</h3>
+      <p class="activation-desc">Enter your Monty Genius license key to enable 1-click autofill.</p>
+      <input type="text" id="licenseKeyInput" class="text-input" placeholder="MGPRO-XXXX-XXXX-XXXX">
+      <button id="btnActivate" class="btn btn-primary" style="margin-top: 8px;">
+        Activate License
+      </button>
+      <div id="activationError" class="error-msg"></div>
+    </div>
+
+    <!-- Product Selection Section -->
+    <div id="productSection" class="section">
+      <label class="label">Select Saved Product:</label>
+      <select id="productSelect" class="select-input">
+        <option value="">-- Choose a Product --</option>
+      </select>
+    </div>
+
+    <!-- Product Summary Card -->
+    <div id="productSummary" class="product-card hidden">
+      <div class="prod-row">
+        <span class="prod-label">Title:</span>
+        <span id="sumTitle" class="prod-val">-</span>
+      </div>
+      <div class="prod-grid">
+        <div><span class="prod-label">SKU:</span> <span id="sumSku" class="prod-val">-</span></div>
+        <div><span class="prod-label">Price:</span> <span id="sumPrice" class="prod-val">-</span></div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="btnAutofill" class="btn btn-primary" disabled>
+        ⚡ Autofill Active Form
+      </button>
+
+      <div class="action-grid">
+        <button id="btnSaveCurrent" class="btn btn-secondary">
+          📥 Save From Page
+        </button>
+        <button id="btnOpenWeb" class="btn btn-outline">
+          🌐 Open Ecom Tools
+        </button>
+      </div>
+    </div>
+
+    <!-- Status Message -->
+    <div id="statusMsg" class="status-msg"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Designed with ❤️ by Mr. Monty Genius
+    </footer>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

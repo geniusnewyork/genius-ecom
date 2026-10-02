@@ -1,0 +1,9 @@
+{
+  "name": "@monty-genius/extension",
+  "version": "1.0.0",
+  "description": "MONTY GENIUS SELLER ASSISTANT — Chrome Extension Manifest V3",
+  "private": true,
+  "scripts": {
+    "package": "node ../../scripts/package-extension.js"
+  }
+}
